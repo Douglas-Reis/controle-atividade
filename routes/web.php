@@ -14,15 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/activities', function(){
+    return view('admin.pages.activities.index');
+});
+
 Route::get('/open', function(){
     return view('admin.pages.activities.open');
 });
 Route::get('/closed', function(){
     return view('admin.pages.activities.closed');
 });
+
 Route::any('activities/search', 'activityController@search')->name('activities.search'); 
+
 Route::Resource('activities', 'ActivityController');

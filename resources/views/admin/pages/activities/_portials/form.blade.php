@@ -7,5 +7,5 @@
     <input type="text" class="form-control" name="description" placeholder="Descrição da ativadade"value="{{$activity-> description ?? old('description')}}">
 </div>
 <div class="form-group">
-    <button type="Enviar" class="btn btn-success">Criar</button>
+    <button type="Enviar" class="btn btn-success">Enviar</button>
 </div>

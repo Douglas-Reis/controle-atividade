@@ -1,14 +1,16 @@
 @extends('admin.layouts.app')
 @section('content')
-    <h1>Todas as atividade</h1>
-    <a href="{{route('activities.create')}}" class="btn btn-primary">Nova atividade</a>
+    <h1>
+        Todas as atividade
+        <a href="{{route('activities.create')}}" class="btn btn-primary">Nova atividade</a>
+    </h1>
 
     <hr>
 
     <form action="{{route('activities.search')}}" method="post" class="form form-inline">
         @csrf
-    <input type="text" name="filter" placeholder="Filtrar: " class="form=control" value="{{$filters['filter'] ?? ''}}">
-        <button type="submit" class="btn btn-info">Pesquisar</button>
+    <input type="text" name="filter" placeholder="Filtrar: " class="form-control" value="{{$filters['filter'] ?? ''}}">
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
     </form>
     <table class="table table-striped">
         <thead>

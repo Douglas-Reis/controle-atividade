@@ -11,18 +11,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm">
+                    <a href="{{url('/activities')}}">
+                        <b>Minhas atividades</b>
+                    </a>   
+                </div>
+                <div class="col-sm">
                     <a href="{{url('/open')}}">
                         <b>Abertas</b>
                     </a>
                 </div>
-                <div class="col-sm">
+                <div class="width .col-sm">
                     <a href="{{url('/closed')}}">
                         <b>Concluídas</b>
-                    </a>
-                </div>
-                <div class="width .col-sm">
-                    <a href="{{url('/activities')}}">
-                        <b>Minhas atividades</b>
                     </a>
                 </div>
             </div>

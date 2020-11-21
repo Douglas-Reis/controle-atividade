@@ -25,7 +25,7 @@ class ActivityController extends Controller
     {
         $activities = Activity::paginate(30);
 
-        return view('admin.pages.activities.index', [
+        return view('admin.pages.activities.index',[
             'activities' => $activities,
         ]);
     }
@@ -66,7 +66,7 @@ class ActivityController extends Controller
         if (!$activity = $this->repository->find($id))
             return redirect()->back();
 
-        return view('admin.pages.activities.show', [
+        return view('admin.pages.activities.show',[
             'activity' => $activity
         ]);
     }
